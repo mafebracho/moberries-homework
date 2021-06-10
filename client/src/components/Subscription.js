@@ -20,8 +20,14 @@ class Subscription extends Component {
     render() {
         return (
             <div>
+            <h1>Upgrade to a plan that works for you</h1>
                 { this.state.subscriptionPlans.map((value, index) => {
-                    return <div key={value.id}>{value.duration_months}</div>
+                    return (
+                        <div key={index}>
+                            <button> {value.duration_months} </button>
+                            <button> {value.price_usd_per_gb} </button>
+                        </div>
+                    )
                 }) }
             </div>
         )
