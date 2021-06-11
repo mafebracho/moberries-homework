@@ -4,11 +4,6 @@ const userSchema = new Schema({
   email: {
     type: String,
     required: true
-  },
-  tos_confirmed: {
-    type: Boolean,
-    default: false,
-    required: true
   }
 });
 
