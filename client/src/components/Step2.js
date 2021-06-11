@@ -50,6 +50,7 @@ class Step2 extends Component {
                 placeholder="E-Mail"
                 onChange={this.handleInputChange}
                 onFocus={this.handleInputFocus}
+                required
               />
 
                 <input
@@ -58,6 +59,7 @@ class Step2 extends Component {
                 placeholder="Card Number"
                 onChange={this.handleInputChange}
                 onFocus={this.handleInputFocus}
+                required
               />
             
               
@@ -67,9 +69,9 @@ class Step2 extends Component {
                   className="form-control"
                   placeholder="Valid Thru"
                   pattern="\d\d/\d\d"
-                  required
                   onChange={this.handleInputChange}
-                onFocus={this.handleInputFocus}
+                  onFocus={this.handleInputFocus}
+                  required
                 />
               
               
@@ -79,14 +81,14 @@ class Step2 extends Component {
                   className="form-control"
                   placeholder="CVC"
                   pattern="\d{3,4}"
-                  required
                   onChange={this.handleInputChange}
-                onFocus={this.handleInputFocus}
+                  onFocus={this.handleInputFocus}
+                  required
                 />
               
             </form>
             <p><Button onClick={this.props.previousStep}>Back</Button></p>
-            <p><Button onClick={this.props.nextStep}>Next</Button></p>
+            <p><Button onClick={this.props.nextStep} disabled={!this.state.email || !this.state.number || !this.state.expiry || !this.state.cvc} >Next</Button></p>
           </div>
         );
       }
