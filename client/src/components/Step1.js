@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Button, Container, Row, ButtonGroup } from 'react-bootstrap';
-import axios from 'axios';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -20,7 +19,6 @@ class Step1 extends Component {
         if (!this.props || !this.props.subscriptionPlans) return <div/>
         return (         
             <div>
-            <h1>hola</h1>
              <Container className="my-4">
                  <Row className="d-inline-block">
                      <h1>Upgrade to a plan that works for you</h1>

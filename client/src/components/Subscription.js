@@ -1,7 +1,10 @@
 import React, { Component } from 'react';
-import { Button, Container, Row, ButtonGroup } from 'react-bootstrap';
 import axios from 'axios';
+// ℹ️ package responsible to make the the next and back buttons
+// because of its documentation I named my files Step1 Step2 and Step3
+// https://www.npmjs.com/package/react-step-wizard
 import StepWizard from 'react-step-wizard';
+
 import Step1 from './Step1';
 import Step2 from './Step2';
 import Step3 from './Step3';
@@ -45,7 +48,7 @@ class Subscription extends Component {
     }
 
     // Step 1 handles
-
+    // I am aware it is not the fanciest solution, but it works and can refractor later if I have time
     changeDuration(event) {
         this.setState({ 
             selectedDuration: parseInt(event.target.value),
@@ -72,7 +75,6 @@ class Subscription extends Component {
     }
 
     // Step 2 handles
-
     handleInputFocus = (e) => {
         this.setState({ focus: e.target.name });
       }
@@ -84,9 +86,8 @@ class Subscription extends Component {
       }
 
     //   Step 3 handles
-
     confirmPurchase() {
-        console.log('confirm')
+        // console.log('confirm')
         axios
         .post('https://httpbin.org/post', this.state)
         .then(res => {

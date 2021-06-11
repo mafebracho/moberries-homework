@@ -1,3 +1,5 @@
+// === Should have read better the instructions and seen that there was no need to make routes, schemas, and all this backed related structure ===
+
 // ℹ️ package responsible to make the connection with mongodb
 // https://www.npmjs.com/package/mongoose
 const mongoose = require("mongoose");

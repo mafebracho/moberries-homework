@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Cards from 'react-credit-cards';
-import { Button, Container, Row, ButtonGroup } from 'react-bootstrap';
+import { Button } from 'react-bootstrap';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'react-credit-cards/es/styles-compiled.css';
@@ -15,6 +15,7 @@ class Step2 extends Component {
             focus: '',
             name: '',
             number: '',
+            email: '',
         }
     }
 
@@ -39,8 +40,18 @@ class Step2 extends Component {
               focused={this.state.focus}
               name={this.state.name}
               number={this.state.number}
+              email={this.state.email}
             />
             <form>
+
+                <input
+                type="tel"
+                name="email"
+                placeholder="E-Mail"
+                onChange={this.handleInputChange}
+                onFocus={this.handleInputFocus}
+              />
+
                 <input
                 type="tel"
                 name="number"

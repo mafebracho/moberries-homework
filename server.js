@@ -1,8 +1,10 @@
-const app = require("./app");
+// === Should have read better the instructions and seen that there was no need to make routes, schemas, and all this backed related structure ===
 
-// ℹ️ Sets the PORT for our app to have access to it. If no env has been set, we hard code it to 3000
-const PORT = process.env.PORT || 5005;
+// const app = require("./app");
 
-app.listen(PORT, () => {
-  console.log(`Server listening on port http://localhost:${PORT}`);
-});
+// // ℹ️ Sets the PORT for our app to have access to it. If no env has been set, we hard code it to 3000
+// const PORT = process.env.PORT || 5005;
+
+// app.listen(PORT, () => {
+//   console.log(`Server listening on port http://localhost:${PORT}`);
+// });

@@ -1,8 +1,10 @@
-const Payment = require('../models/payment');
-const router = require('express').Router();
+// === Should have read better the instructions and seen that there was no need to make routes, schemas, and all this backed related structure ===
 
-router.get("/", (req, res, next) => {
-  res.json("All good in here");
-});
+// const Payment = require('../models/payment');
+// const router = require('express').Router();
 
-module.exports = router;
+// router.get("/", (req, res, next) => {
+//   res.json("All good in here");
+// });
+
+// module.exports = router;
