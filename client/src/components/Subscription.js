@@ -75,12 +75,12 @@ class Subscription extends Component {
     }
 
     // Step 2 handles
-    handleInputFocus = (e) => {
-        this.setState({ focus: e.target.name });
+    handleInputFocus = (event) => {
+        this.setState({ focus: event.target.name });
       }
       
-      handleInputChange = (e) => {
-        const { name, value } = e.target;
+      handleInputChange = (event) => {
+        const { name, value } = event.target;
         
         this.setState({ [name]: value });
       }
@@ -100,13 +100,17 @@ class Subscription extends Component {
     }
 
     render() {
-        console.log(this.state)
+        // console.log(this.state)
         return (
+            <div>
             <StepWizard>
             <Step1 changeDuration = {this.changeDuration} changeStorage = {this.changeStorage} changeUpfront = {this.changeUpfront} subscriptionPlans = {this.state.subscriptionPlans} />
             <Step2 handleInputFocus = {this.handleInputFocus} handleInputChange = {this.handleInputChange} />
             <Step3 confirmPurchase = {this.confirmPurchase} changeChecked = {this.changeChecked} />
             </StepWizard>
+
+            <p>Info: You currently selected a plan with a duration of: {this.state.selectedDuration} and {this.state.selectedStorage} GB. Current basket value: {this.state.price}</p>
+            </div>
         )
     }
 

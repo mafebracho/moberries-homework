@@ -15,7 +15,7 @@ class Step1 extends Component {
     }
 
     render() {
-        console.log(this.props.subscriptionPlans)
+        // console.log(this.props.subscriptionPlans)
         if (!this.props || !this.props.subscriptionPlans) return <div/>
         return (         
             <div>
