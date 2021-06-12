@@ -7,11 +7,14 @@ class Step3 extends Component {
 
     constructor(props) {
         super(props)
-        this.state = {}
+        this.state = {
+            isActive: {}
+        }
         this.changeChecked = this.changeChecked.bind(this)
     }
 
     changeChecked(event) {
+        // console.log(event.target.changeChecked)
         this.setState({ tacChecked: !this.state.tacChecked })
         this.changeChecked(event)
     }
